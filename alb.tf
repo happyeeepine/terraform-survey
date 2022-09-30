@@ -6,8 +6,8 @@ resource "aws_lb" "example" {
   enable_deletion_protection = false
 
   subnets = [
-    aws_subnet.public_0.id,
-    aws_subnet.public_1.id,
+    module.example_vpc.subnet_public_0,
+    module.example_vpc.subnet_public_1,
   ]
 
   access_logs {

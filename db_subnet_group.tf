@@ -1,4 +1,4 @@
 resource "aws_db_subnet_group" "example" {
   name       = "example"
-  subnet_ids = [aws_subnet.private_0.id, aws_subnet.private_1.id]
+  subnet_ids = [module.example_vpc.subnet_private_0, module.example_vpc.subnet_private_1]
 }

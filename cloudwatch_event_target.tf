@@ -12,7 +12,7 @@ resource "aws_cloudwatch_event_target" "example_batch" {
 
     network_configuration {
       assign_public_ip = "false"
-      subnets          = [aws_subnet.private_0.id]
+      subnets          = [module.example_vpc.subnet_private_0]
     }
   }
 }

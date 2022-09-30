@@ -1,5 +1,5 @@
 resource "aws_route_table" "public" {
-  vpc_id = aws_vpc.example.id
+  vpc_id = module.example_vpc.vpc_id
 }
 
 resource "aws_route" "public" {
@@ -9,11 +9,11 @@ resource "aws_route" "public" {
 }
 
 resource "aws_route_table_association" "public_0" {
-  subnet_id      = aws_subnet.public_0.id
+  subnet_id      = module.example_vpc.subnet_public_0
   route_table_id = aws_route_table.public.id
 }
 
 resource "aws_route_table_association" "public_1" {
-  subnet_id      = aws_subnet.public_1.id
+  subnet_id      = module.example_vpc.subnet_public_1
   route_table_id = aws_route_table.public.id
 }

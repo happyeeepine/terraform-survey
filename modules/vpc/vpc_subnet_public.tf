@@ -11,3 +11,11 @@ resource "aws_subnet" "public_1" {
   map_public_ip_on_launch = true
   availability_zone       = "ap-northeast-1c"
 }
+
+output "subnet_public_0" {
+  value = aws_subnet.public_0.id
+}
+
+output "subnet_public_1" {
+  value = aws_subnet.public_1.id
+}

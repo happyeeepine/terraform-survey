@@ -11,3 +11,11 @@ resource "aws_subnet" "private_1" {
   availability_zone       = "ap-northeast-1c"
   map_public_ip_on_launch = false
 }
+
+output "subnet_private_0" {
+  value = aws_subnet.private_0.id
+}
+
+output "subnet_private_1" {
+  value = aws_subnet.private_1.id
+}
